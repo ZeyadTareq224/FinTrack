@@ -1,16 +1,23 @@
-# FinOS
+# FinOS v3
 
-Mobile-first personal finance OS built with React + Vite.
+Personal finance operating system built around Zeyad's actual rules and priorities.
 
-## Structure
-- Today — safe-to-spend, quick expense entry, paycheck plan
-- Spending — 7.3k budget, categories, transaction history, CSV import
-- Goals — renovation, honeymoon and future goals
-- Freedom — FIRE projection in today's purchasing power
-- Money — cash, investments, gold and retirement with earmarks
+## Core behavior
+- Financial cycle: 28th → 27th.
+- Spending target: 7,303 EGP with separate, granular buckets.
+- Retirement minimum: 6,500 EGP/month, funded before goals.
+- Liquid reserve rule: keep at least 10,000 EGP.
+- Credit card modeled as a liability and paid in full monthly.
+- Priority order: Home renovation → First 1M net-worth milestone → Marriage/honeymoon.
+- Renovation target: 350,000 EGP, desired 2027-01-01.
+- Honeymoon target: 100,000 EGP.
+- Physical gold: 20g 24K, with manual EGP/g input so net worth is not guessed.
+- "Can I afford it?" estimates whether a purchase fits the current cycle and how many days it may delay the next goal.
 
-FinOS uses browser localStorage and migrates legacy WealthOS state when available. No cloud sync or bank connection yet.
+## Run
+```bash
+npm install
+npm run dev
+```
 
-Run: `npm install && npm run dev`
-Build: `npm run build`
-Vercel output directory: `dist`
+Data is currently stored in browser localStorage only.
