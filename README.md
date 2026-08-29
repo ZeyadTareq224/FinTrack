@@ -1,14 +1,17 @@
-# FinOS v4
+# FinOS v5
 
-Personal finance operating system built with React + Vite.
+A local-first personal finance operating system built around one canonical financial model.
 
-## New in v4
-- 28th → 27th financial cycle history with previous-month browsing
-- Per-category affordability checks that preserve the monthly target
-- Monthly credit-card paid/unpaid confirmation
-- Net-worth snapshots and wealth trend history
-- Attention cues for unpaid card and transactions needing review
-- Granular spending buckets remain ungrouped
+## What changed in v5
+- One source of truth for balances, goals, budgets, card debt, FIRE and net worth.
+- Manual expenses update the selected cash account or credit-card balance immediately.
+- Transfers update both sides and never count as spending.
+- Goal progress is derived from linked accounts instead of a duplicated `funded` field.
+- Category allocations must balance to the monthly spending target.
+- Credit-card payment is a real money movement; an external-payment override is available.
+- Closing a 28th→27th cycle saves a permanent report and net-worth snapshot.
+- Historical CSV imports affect spending history but intentionally do not mutate today's balances.
+- v4 data migrates automatically to the v5 schema in localStorage.
 
 ## Run
 ```bash
@@ -21,4 +24,4 @@ npm run dev
 npm run build
 ```
 
-Data is stored locally in the browser using localStorage.
+Data is stored in browser localStorage under `finos-state-v5`.
